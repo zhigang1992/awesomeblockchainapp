@@ -15,7 +15,7 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-      - run: yarn jstest && yarn chain > /dev/null & sleep 10 && yarn test
+      - run: yarn test && yarn chain > /dev/null & sleep 10 && yarn soltest
       - deploy:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
