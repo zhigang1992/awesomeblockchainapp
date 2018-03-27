@@ -1,0 +1,25 @@
+{
+  "name": "awesomeblockchainapp",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "chain": "ganache-cli",
+    "deploy": "cd contract && truffle migrate",
+    "soltest": "cd contract && truffle test",
+    "surge": "surge --project build --domain awesomeblockchainapp.surge.sh"
+  },
+  "devDependencies": {
+    "ganache-cli": "^6.1.0",
+    "surge": "^0.20.1",
+    "truffle": "^4.1.3"
+  }
+}
